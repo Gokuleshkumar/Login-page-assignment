@@ -2,31 +2,141 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login | KLN College</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login | College Portal</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 350px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    width: 110px;
+    margin-bottom: 15px;
+}
+
+.login-box h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: #ccc;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -12px;
+    font-size: 12px;
+    color: #00e6ff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #00e6ff;
+    border: none;
+    border-radius: 25px;
+    color: #003344;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00bcd4;
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ddd;
+}
+.kln-logo
+        {
+            width:40%;
+            height:40%;
+            display:flex;
+            justify-Content:center;
+            align-items:center;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="login-container">
-        <!-- Logo -->
-        <img src="https://img.favpng.com/10/13/10/kln-college-of-information-technology-k-l-n-college-of-engineering-thiagarajar-college-of-engineering-pandian-saraswathi-yadav-engineering-college-png-favpng-KudCDWDvRLi4FDLwyag7BVywr.jpg" alt="KLN College Logo" class="logo">
+    <div class="login-box">
+        <img class="kln-logo" src="https://img.favpng.com/10/13/10/kln-college-of-information-technology-k-l-n-college-of-engineering-thiagarajar-college-of-engineering-pandian-saraswathi-yadav-engineering-college-png-favpng-KudCDWDvRLi4FDLwyag7BVywr.jpg" alt="KLN College Logo" class="logo">
+" alt="College Logo" class="logo">
 
-        <h2>Student Login</h2>
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Please login to your account</p>
 
         <form>
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Enter username" required>
+            <div class="input-box">
+                <input type="text" required>
+                <label>Username</label>
             </div>
 
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter password" required>
+            <div class="input-box">
+                <input type="password" required>
+                <label>Password</label>
             </div>
 
             <button type="submit">Login</button>
+
+            <p class="footer-text">© 2026 KLN College</p>
         </form>
     </div>
 
 </body>
 </html>
+
+
